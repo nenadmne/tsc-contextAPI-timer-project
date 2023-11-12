@@ -1,11 +1,11 @@
 import { createContext, useContext } from "react";
 
-type Timer = {
+export type Timer = {
   name: string;
   duration: number;
 };
 
-type TimersState = {
+export type TimersState = {
   isRunning: boolean;
   timers: Timer[];
 };

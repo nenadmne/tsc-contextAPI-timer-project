@@ -55,10 +55,10 @@ const TimersContextProvider = ({ children }: TimersContextProviderProps) => {
     isRunning: true,
     timers: [],
   };
-  const [TimersState, dispatch] = useReducer(timersReducer, initialState);
+  const [timersState, dispatch] = useReducer(timersReducer, initialState);
   const ctx: TimersContextValue = {
-    timers: [],
-    isRunning: false,
+    timers: timersState.timers,
+    isRunning: timersState.isRunning,
     addTimer(timerData) {
       dispatch({ type: "ADD_TIMER", payload: timerData });
     },
